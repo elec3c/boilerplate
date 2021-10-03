@@ -11,6 +11,10 @@
 <meta name="keywords" content="{'seoPro.keywords' | placeholder}">
 <meta name="robots" content="{'seoTab.robotsTag' | placeholder}">
 
+{if 'noindex' | in : 'seoTab.robotsTag' | placeholder}
+    <link rel="canonical" href="{$page}"/>
+{/if}
+
 <meta name="csrf-token" content="{$.session['csrf-token']}">
 
 {'!hreflang' | snippet}
